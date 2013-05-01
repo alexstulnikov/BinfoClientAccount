@@ -2,7 +2,13 @@
 
     <string name="app_name">BinfoClientAccount</string>
     <string name="hello_world">Hello world!</string>
-    <string name="menu_settings">Settings</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">Личный профиль компании</string>
+    <string name="title_tab_company">О компании</string>
+    <string name="title_tab_private">Пресональное</string>
+    <string name="title_tab_password">Пароль</string>
+    <string name="tab_password_title">Изменить пароль</string>
+    <string name="tab_password_new">Введите новый пароль:</string>
+    <string name="tab_password_repeat_new">Повторите новый пароль:</string>
+    <string name="tab_password_button_save">Сохранить пароль</string>
 
 </resources>
