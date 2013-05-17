@@ -31,6 +31,7 @@
     <string name="tab_personal_email">* E-mail:</string>
     <string name="tab_personal_alt_email">Альтернативный e-mail:</string>
     <string name="tab_personal_phone">Контактный телефон:</string>
-    <string name="incomplete_error">Не все обязательные поля заполнены</string>
+    <string name="incomplete_error">Это обязательное поле не заполненно"</string>
+    <string name="password_error">Введенные пароли не совпадают</string>
 
 </resources>

@@ -1075,6 +1075,7 @@ containing a value of this type.
         public static final int app_name=0x7f09000d;
         public static final int hello_world=0x7f09000e;
         public static final int incomplete_error=0x7f09002c;
+        public static final int password_error=0x7f09002d;
         public static final int tab_button_save=0x7f090018;
         public static final int tab_company_address=0x7f09001a;
         public static final int tab_company_city=0x7f09001d;
