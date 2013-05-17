@@ -10,5 +10,27 @@
     <string name="tab_password_new">Введите новый пароль:</string>
     <string name="tab_password_repeat_new">Повторите новый пароль:</string>
     <string name="tab_password_button_save">Сохранить пароль</string>
+    <string name="tab_company_title">Информация о компании</string>
+    <string name="tab_button_save">Сохранить изменения</string>
+    <string name="tab_company_name">* Название компании:</string>
+    <string name="tab_company_address">* Адрес компании:</string>
+    <string name="tab_company_country">* Страна компании:</string>
+    <string name="tab_company_region">* Регион компании:</string>
+    <string name="tab_company_city">* Город компании:</string>
+    <string name="tab_company_post">* Почтовый индекс:</string>
+    <string name="tab_company_phone">* Телефон компании:</string>
+    <string name="tab_company_fax">Факс:</string>
+    <string name="tab_company_site">Сайт компании:</string>
+    <string name="tab_company_keywords">Ключевые слова для поиска:</string>
+    <string name="tab_company_services">Услуги осуществляемые компанией:</string>
+    <string name="tab_personal_title">Персональная информация</string>
+    <string name="tab_personal_first_name">* Имя:</string>
+    <string name="tab_personal_father_name">* Отчество:</string>
+    <string name="tab_personal_last_name">* Фамилия:</string>
+    <string name="tab_personal_post">* Должность:</string>
+    <string name="tab_personal_email">* E-mail:</string>
+    <string name="tab_personal_alt_email">Альтернативный e-mail:</string>
+    <string name="tab_personal_phone">Контактный телефон:</string>
+    <string name="incomplete_error">Не все обязательные поля заполнены</string>
 
 </resources>

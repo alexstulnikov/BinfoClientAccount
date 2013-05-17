@@ -1,14 +1,159 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:padding="5dp" >
 
-    <TextView
-        android:id="@+id/textView1"
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/buttonSaveCompany" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textViewCompanyTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="30dp"
+                android:text="@string/tab_company_title"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewCompanyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/tab_company_name" />
+
+            <EditText
+                android:id="@+id/editTextCompanyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_between_fields"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/textViewCompanyAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/tab_company_address" />
+
+            <EditText
+                android:id="@+id/editTextCompanyAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_between_fields"
+                android:ems="10"
+                android:inputType="text" />
+            
+            <TextView
+                android:id="@+id/textViewCompanyPost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/tab_company_post" />
+
+            <EditText
+                android:id="@+id/editTextCompanyPost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/space_between_fields"
+                android:ems="10"
+                android:inputType="text" />
+            
+             <TextView
+                android:id="@+id/textViewCompanyPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/tab_company_phone" />
+
+            <EditText
+                android:id="@+id/editTextCompanyPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_between_fields"
+                android:ems="10"
+                android:inputType="phone" />
+            
+             <TextView
+                android:id="@+id/textViewCompanyFax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/tab_company_fax" />
+
+            <EditText
+                android:id="@+id/editTextCompanyFax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_between_fields"
+                android:ems="10"
+                android:inputType="phone" />
+            
+             <TextView
+                android:id="@+id/textViewCompanySite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/tab_company_site" />
+
+            <EditText
+                android:id="@+id/editTextCompanySite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_between_fields"
+                android:ems="10"
+                android:inputType="text" />
+            
+             <TextView
+                android:id="@+id/textViewCompanyKeys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/tab_company_keywords" />
+
+            <EditText
+                android:id="@+id/editTextCompanyKeys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_between_fields"
+                android:ems="10"
+                android:inputType="textMultiLine" />
+            
+             <TextView
+                android:id="@+id/textViewCompanyServices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/tab_company_services" />
+
+            <EditText
+                android:id="@+id/editTextCompanyServices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_between_fields"
+                android:ems="10"
+                android:inputType="textMultiLine" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonSaveCompany"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/title_tab_company" />
+        android:text="@string/tab_button_save" />
 
 </RelativeLayout>

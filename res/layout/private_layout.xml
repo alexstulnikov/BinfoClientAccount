@@ -1,14 +1,146 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:padding="5dp" >
 
-    <TextView
-        android:id="@+id/textView1"
+   <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/buttonSavePersonal" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textViewPersonalTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="30dp"
+                android:text="@string/tab_personal_title"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewPersonalFirstName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/tab_personal_first_name" />
+
+            <EditText
+                android:id="@+id/editTextPersonalFirstName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_between_fields"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/textViewPersonalFatherName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/tab_personal_father_name" />
+
+            <EditText
+                android:id="@+id/editTextPersonalFatherName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_between_fields"
+                android:ems="10"
+                android:inputType="text" />
+            
+            <TextView
+                android:id="@+id/textViewPersonalLastName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/tab_personal_last_name" />
+
+            <EditText
+                android:id="@+id/editTextPersonalLastName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/space_between_fields"
+                android:ems="10"
+                android:inputType="text" />
+            
+             <TextView
+                android:id="@+id/textViewPersonalPost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/tab_personal_post" />
+
+            <EditText
+                android:id="@+id/editTextPersonalPost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_between_fields"
+                android:ems="10"
+                android:inputType="phone" />
+            
+             <TextView
+                android:id="@+id/textViewPersonalEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/tab_personal_email" />
+
+            <EditText
+                android:id="@+id/editTextPersonalEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_between_fields"
+                android:ems="10"
+                android:inputType="textEmailAddress" />
+            
+             <TextView
+                android:id="@+id/textViewPersonalAemail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/tab_personal_alt_email" />
+
+            <EditText
+                android:id="@+id/editTextPersonalAemail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_between_fields"
+                android:ems="10"
+                android:inputType="textEmailAddress" />
+            
+             <TextView
+                android:id="@+id/textViewPersonalPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/tab_personal_phone" />
+
+            <EditText
+                android:id="@+id/editTextPersonalPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_between_fields"
+                android:ems="10"
+                android:inputType="phone" />
+            
+             
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonSavePersonal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/title_tab_private" />
+        android:text="@string/tab_button_save" />
 
 </RelativeLayout>

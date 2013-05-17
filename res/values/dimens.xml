@@ -1,0 +1,3 @@
+<resources>
+    <dimen name="space_between_fields">5dip</dimen>
+</resources>
