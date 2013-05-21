@@ -33,5 +33,10 @@
     <string name="tab_personal_phone">Контактный телефон:</string>
     <string name="incomplete_error">Это обязательное поле не заполненно"</string>
     <string name="password_error">Введенные пароли не совпадают</string>
+    <string name="save_message_local">Данные сохранены и будут отправлены при наличии соединения</string>
+    <string name="save_message_global">Данные отправлены на сервер успешно</string>
+    <string name="button_login">Вход</string>
+    <string name="login_login">Логин</string>
+    <string name="login_pass">Пароль</string>
 
 </resources>

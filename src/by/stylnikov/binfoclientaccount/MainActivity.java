@@ -1,6 +1,11 @@
 package by.stylnikov.binfoclientaccount;
 
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
@@ -8,12 +13,15 @@ import android.util.Log;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.ActionBar.Tab;
 import com.actionbarsherlock.app.ActionBar.TabListener;
-import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 
 public class MainActivity extends SherlockFragmentActivity implements TabListener {
 
 	private static final String LOG_TAG = "BinfoClient";
+	private static final String PREF_LOGIN = "login";
+	
+	private NetworkReceiver receiver;
+	private SharedPreferences preferences;
 
 	private CompanyFragment companyFragment;
 	private PrivateFragment privateFragment;
@@ -24,6 +32,13 @@ public class MainActivity extends SherlockFragmentActivity implements TabListene
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 		Log.d(LOG_TAG, "onCreate");
+		
+		preferences = PreferenceManager.getDefaultSharedPreferences(this);
+		if(preferences.getString(PREF_LOGIN, "").length()<1){
+			Intent intent = new Intent(this, LoginActivity.class);
+			startActivity(intent);
+			finish();
+		}
 
 		companyFragment = new CompanyFragment();
 		privateFragment = new PrivateFragment();
@@ -49,6 +64,11 @@ public class MainActivity extends SherlockFragmentActivity implements TabListene
 		tab.setTag(passwordFragment);
 		tab.setTabListener(this);
 		actionBar.addTab(tab);
+		
+		IntentFilter filter = new IntentFilter(
+				ConnectivityManager.CONNECTIVITY_ACTION);
+		receiver = new NetworkReceiver();
+		this.registerReceiver(receiver, filter);
 	}
 
 	@Override
@@ -69,5 +89,12 @@ public class MainActivity extends SherlockFragmentActivity implements TabListene
 	@Override
 	public void onTabReselected(Tab tab, FragmentTransaction ft) {
 		Log.d(LOG_TAG, "Reselected tab: " + tab.getText());
+	}
+	
+	protected void onDestroy() {
+		super.onDestroy();
+		if (receiver != null) {
+			this.unregisterReceiver(receiver);
+		}
 	}
 }
